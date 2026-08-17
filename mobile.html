@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мобильная версия — Корпоративный Университет</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.svg" alt="Логотип" class="logo-img">
+        <span class="logo-text">Корпоративный Университет</span>
+      </a>
+      <button class="menu-toggle" aria-label="Меню" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="search.html">Поиск вебинара</a>
+        <a href="webinar.html">Вебинар</a>
+        <a href="test.html">Электронный тест</a>
+        <a href="mobile.html" class="active">Мобильная версия</a>
+        <a href="exit.html">Выход</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">Главная</a> · Мобильная версия</div>
+      <h1>Просмотр вебинара с телефона</h1>
+    </div>
+
+    <div class="step">
+      <div class="step-number">!</div>
+      <h2>Внимание</h2>
+      <div class="warning">
+        На данный момент, к сожалению, в мобильной версии платформы <strong>нет возможности смотреть вебинар</strong>.
+        Для присутствия вам необходимо перейти по ссылке или скопировать ссылку и вставить её в поисковую строку браузера.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">1</div>
+      <h2>Откройте уведомления</h2>
+      <p>Откройте уведомления на устройстве:</p>
+      <img src="images/image6.png" alt="Уведомления на телефоне">
+      <p class="img-caption">Раздел уведомлений</p>
+    </div>
+
+    <div class="step">
+      <div class="step-number">2</div>
+      <h2>Перейдите по ссылке из письма</h2>
+      <p>Найдите нужное письмо о регистрации и перейдите к нему. Перейдите по ссылке или скопируйте её и вставьте в поисковую строку браузера.</p>
+      <img src="images/image9.png" alt="Ссылка в письме">
+      <p class="img-caption">Пример письма</p>
+      <img src="images/image13.png" alt="Письмо с регистрацией на вебинар">
+      <p class="img-caption">Письмо с информацией о регистрации и ссылкой для входа</p>
+      <div class="note">
+        Тест при этом останется в приложении, поэтому для его прохождения вам необходимо будет вернуться в приложение.
+      </div>
+    </div>
+
+    <div class="page-nav">
+      <a href="test.html" class="btn btn-secondary">← Электронный тест</a>
+      <a href="exit.html" class="btn btn-primary">Далее: Выход →</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© Корпоративный Университет · Инструкция для сотрудников</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.nav a').forEach(a => {
+      a.addEventListener('click', () => document.querySelector('.nav').classList.remove('open'));
+    });
+  </script>
+</body>
+</html>

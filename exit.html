@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Выход из вебинара — Корпоративный Университет</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.svg" alt="Логотип" class="logo-img">
+        <span class="logo-text">Корпоративный Университет</span>
+      </a>
+      <button class="menu-toggle" aria-label="Меню" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="search.html">Поиск вебинара</a>
+        <a href="webinar.html">Вебинар</a>
+        <a href="test.html">Электронный тест</a>
+        <a href="mobile.html">Мобильная версия</a>
+        <a href="exit.html" class="active">Выход</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">Главная</a> · Выход из вебинара</div>
+      <h1>Выход из вебинара</h1>
+    </div>
+
+    <div class="step">
+      <div class="step-number">12</div>
+      <h2>Завершение участия</h2>
+      <p>Чтобы выйти из вебинара, вам необходимо найти значок <span class="highlight">«Дверь»</span> в правом нижнем углу экрана и нажать на него.</p>
+      <img src="images/image14.png" alt="Значок Дверь для выхода">
+      <p class="img-caption">«Выход» в интерфейсе виртуальной комнаты</p>
+      <p>Далее выберите нужный вариант:</p>
+      <img src="images/image12.png" alt="Подтверждение выхода из вебинара">
+      <p class="img-caption">Диалог подтверждения выхода</p>
+      <div class="success">
+        Ваш вебинар завершён.
+      </div>
+    </div>
+
+    <div class="page-nav">
+      <a href="mobile.html" class="btn btn-secondary">← Мобильная версия</a>
+      <a href="index.html" class="btn btn-primary">На главную →</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© Корпоративный Университет · Инструкция для сотрудников</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.nav a').forEach(a => {
+      a.addEventListener('click', () => document.querySelector('.nav').classList.remove('open'));
+    });
+  </script>
+</body>
+</html>
